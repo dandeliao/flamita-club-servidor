@@ -14,7 +14,7 @@ const app = express();
 
 // middleware
 app.use(cors({
-    origin: 'null',
+    origin: 'http://159.223.215.28',
     credentials: true
 }));
 app.use(express.json());
