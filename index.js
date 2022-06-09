@@ -296,6 +296,10 @@ app.get('/:pessoa', async (req, res) => {
 })
 
 
+app.get('/', async (req, res) => {
+    res.send('você está conectade ao servidor de flamita club!');
+});
+
 // ---
 // inicia servidor
 let servidor = app.listen(PORT, () => {
