@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+//const cors = require('cors');
 const pool = require('./config/bancodedados.js');
 const youtubedl = require('youtube-dl-exec');
 var session = require('express-session');
@@ -13,10 +13,12 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // middleware
-app.use(cors({
-    origin: '159.223.215.28',
-    credentials: true
-}));
+//app.use(cors(
+//{
+//    origin: 'https://flamita.club',
+//    credentials: true
+//}
+//));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('static'));
