@@ -17,3 +17,11 @@ CREATE TABLE musicas(
     pessoa  VARCHAR(64),
     criacao TIMESTAMPTZ      
 );
+
+CREATE TABLE sessoes (
+    sid VARCHAR(512) COLLATE "default",
+    sess json NOT NULL,
+    expire timestamp(6) NOT NULL,
+    CONSTRAINT "session_pkey" PRIMARY KEY ("sid")
+);
+CREATE INDEX IF NOT EXISTS "IDX_session_expire" ON sessoes ("expire");
